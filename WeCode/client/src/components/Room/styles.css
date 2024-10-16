@@ -1,0 +1,36 @@
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr 10px 1fr;
+}
+
+.gutter-col {
+  grid-row: 1/-1;
+  cursor: col-resize;
+}
+
+.gutter-col-1 {
+  grid-column: 2;
+  background: "#e5e7eb";
+}
+
+.gutter-col-3 {
+    grid-column: 4;
+}
+
+.gutter {
+  /* background-color: #eee; */
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter-vertical {
+  cursor: col-resize;
+}
+.gutter-horizontal {
+  cursor: row-resize;
+}
+
+:hover.gutter, :active.gutter {
+  background-color: #0a84ff;
+  transition: all 150ms step-end;
+}
