@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "build": "npx ts-node index.ts",
-=======
     "build": "npx tsc",
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
@@ -19,10 +15,7 @@
   "dependencies": {
     "@types/cors": "^2.8.13",
     "@types/request-promise-native": "^1.0.16",
-<<<<<<< HEAD
     "@upstash/redis": "^1.37.0",
-=======
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
