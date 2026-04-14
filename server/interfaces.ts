@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Credit {
   session?: string;
   csrfToken: string;
@@ -30,12 +29,4 @@ export interface NewQuestionsRoom {
 
 export interface NewQuestionsState {
   [room: string]: NewQuestionsRoom;
-=======
-export interface NewQuesstionsObj {
-  [room: string]: {
-    initiator: string;
-    maxResponseTime: number;
-    value: number;
-  };
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
 }
