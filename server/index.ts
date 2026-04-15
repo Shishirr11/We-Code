@@ -12,13 +12,21 @@ dotenv.config();
 const app = express();
 const httpServer = http.createServer(app);
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL || "http://localhost:5173",
+  "http://localhost:5173",
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173"
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) callback(null, true);
+    else callback(new Error("Not allowed by CORS"));
+  },
 }));
 app.use(express.json());
 
 const io = new Server(httpServer, {
-  cors: { origin: process.env.FRONTEND_URL || "http://localhost:5173", methods: ["GET", "POST"] },
+  cors: { origin: allowedOrigins, methods: ["GET", "POST"] },
 });
 
 const { sendBotMessage } = setupSocket(io);
