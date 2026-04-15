@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { CircularProgress } from "@mui/material";
 import { validateUser } from "../api/auth";
 import { setUsername } from "../store/slices/userSlice";
-=======
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { BACKEND_URL } from "../config";
-import { useDispatch } from "react-redux";
-import { setUserName } from "../store/slices/userSlice";
-import { isUsernameValid } from "../functions/authFunctions";
-import { CircularProgress } from "@mui/material";
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
 
 const UsernameValidationWrapper = ({ children }) => {
   const { username } = useParams();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-<<<<<<< HEAD
 
   useEffect(() => {
     const validate = async () => {
@@ -45,23 +34,6 @@ const UsernameValidationWrapper = ({ children }) => {
   }
 
   return children;
-=======
-  const validateUsername = async () => {
-    const usernameValidity = await isUsernameValid(username);
-    if (usernameValidity) {
-      dispatch(setUserName(username));
-      setLoading(false);
-    } else {
-      navigate("/");
-    }
-  };
-
-  useEffect(() => {
-    validateUsername();
-  }, []);
-
-  return loading ? <CircularProgress color="inherit" /> : children;
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
 };
 
 export default UsernameValidationWrapper;

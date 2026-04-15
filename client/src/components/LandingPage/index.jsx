@@ -3,10 +3,6 @@ import { useDispatch } from "react-redux";
 import { setUserName } from "../../store/slices/userSlice";
 import { BACKEND_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-=======
-import Button from "@girishsawant999/react-loading-button";
->>>>>>> 9dc63e5fe5932ea5a0688fb55425d87bac24ab60
 import { isUsernameValid } from "../../functions/authFunctions";
 
 const LandingPage = () => {
