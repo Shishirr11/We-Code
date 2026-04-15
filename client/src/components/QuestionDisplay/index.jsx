@@ -5,7 +5,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { nextProblem, prevProblem, updateExampleTestcases } from "../../store/slices/roomSlice";
 import { getProblemDetails } from "../../api/leetcode";
 import DifficultyTag from "./DifficultyTag";
-import DisplayTags from "./DisplayTags";
+import DisplayTags from "./displayTags";
 import "./styles.css";
 
 const DIFFICULTY_COLOR = { Easy: "#00b8a3", Medium: "#ffc01e", Hard: "#ff375f" };
