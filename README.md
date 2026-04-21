@@ -1,4 +1,5 @@
 # WeCode
+Live here : https://we-code-tau.vercel.app
 
 WeCode is a real-time collaborative coding platform built for practicing LeetCode problems with friends. Everyone in a room gets the same set of problems, can chat, and can run or submit code directly through their own LeetCode account. Think of it as a shared coding session where you can see what problem everyone is on and vote to load new questions when the group is ready to move on.
 
