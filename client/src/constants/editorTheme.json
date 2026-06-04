@@ -1,0 +1,21 @@
+{
+  "base": "vs-dark",
+  "inherit": true,
+  "rules": [
+    { "background": "282828", "token": "" },
+    { "foreground": "6a9955", "token": "comment" },
+    { "foreground": "4fc1ff", "token": "constant" },
+    { "foreground": "c586c0", "token": "keyword" },
+    { "foreground": "ce9178", "token": "string" },
+    { "foreground": "9cdcfe", "token": "support" },
+    { "foreground": "dcdcaa", "token": "meta.function-call.py" }
+  ],
+  "colors": {
+    "editor.background": "#282828",
+    "editor.foreground": "#D4D4D4",
+    "editor.inactiveSelectionBackground": "#3A3D41",
+    "editorIndentGuide.background": "#404040",
+    "editorIndentGuide.activeBackground": "#707070",
+    "editor.selectionHighlightBackground": "#ADD6FF26"
+  }
+}

@@ -1,0 +1,4 @@
+.monaco-editor .suggest-widget {
+  overflow: hidden;
+  z-index: 10;
+}

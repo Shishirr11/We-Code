@@ -1,0 +1,38 @@
+/* Two-panel layout: question | gutter | editor+chat */
+.room-grid {
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Drag gutter */
+.gutter-col {
+    background-color: #222;
+    cursor: col-resize;
+    transition: background-color 200ms ease;
+    position: relative;
+    z-index: 10;
+}
+
+/* Thin visible line in centre of gutter */
+.gutter-col::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    width: 1px;
+    background: #2a2a2a;
+    transition: background-color 200ms ease;
+}
+
+.gutter-col:hover,
+.gutter-col:active {
+    background-color: #1a1a1a;
+}
+
+.gutter-col:hover::after,
+.gutter-col:active::after {
+    background-color: #4a9eff;
+}
